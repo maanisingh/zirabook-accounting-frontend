@@ -1,5 +1,7 @@
-// Use environment variable for API URL, fallback to production URL
-// .env file now contains VITE_API_URL for Railway deployment
-const BaseUrl = import.meta.env.VITE_API_URL || 'https://backend-api-production-dd10.up.railway.app/api/v1';
+// const BaseUrl = 'https://84kmwvvs-8080.inc1.devtunnels.ms/api/v1/';
+// const BaseUrl = 'https://accounting-prisma-production.up.railway.app/api/v1/';
+// const BaseUrl = 'https://02x4fc84-8080.inc1.devtunnels.ms/api/v1/';
+// const BaseUrl = 'https://accounting-api.alexandratechlab.com/api/v1/';
+const BaseUrl = 'https://backend-api-production-dd10.up.railway.app/api/v1/';
 
 export default BaseUrl;
