@@ -14,10 +14,10 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Demo credentials
+  // Demo credentials (matching backend seed.js)
   const demoCredentials = {
-    superadmin: { email: "superadmin@test.com", password: "Test@123456" },
-    company: { email: "admin@test.com", password: "Test@123456" }
+    superadmin: { email: "superadmin@zirakbook.com", password: "admin123" },
+    company: { email: "admin@democompany.com", password: "demo123" }
   };
 
   const fillDemoCredentials = (type) => {
@@ -104,7 +104,7 @@ const Login = () => {
                   <div className="flex items-center justify-between text-xs">
                     <div className="flex-1">
                       <div className="font-medium text-gray-700">Super Admin</div>
-                      <div className="text-gray-600">superadmin@test.com / Test@123456</div>
+                      <div className="text-gray-600">superadmin@zirakbook.com / admin123</div>
                     </div>
                     <button
                       onClick={() => fillDemoCredentials('superadmin')}
@@ -116,7 +116,7 @@ const Login = () => {
                   <div className="flex items-center justify-between text-xs">
                     <div className="flex-1">
                       <div className="font-medium text-gray-700">Company Admin</div>
-                      <div className="text-gray-600">admin@test.com / Test@123456</div>
+                      <div className="text-gray-600">admin@democompany.com / demo123</div>
                     </div>
                     <button
                       onClick={() => fillDemoCredentials('company')}
