@@ -102,7 +102,7 @@ const Company = () => {
   useEffect(() => {
     const fetchPlans = async () => {
       try {
-        const response = await axios.get(`${BaseUrl}plans`);
+        const response = await axios.get(`${BaseUrl}/plans`);
         // The API returns plans in response.data.data as an array
         const plansData = response.data.data || [];
         setPlans(Array.isArray(plansData) ? plansData : []);
