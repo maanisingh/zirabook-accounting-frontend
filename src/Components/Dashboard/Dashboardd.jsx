@@ -33,7 +33,7 @@ const Dashboardd = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        const response = await axiosInstance.get(`${BaseUrl}superadmindhasboard`);
+        const response = await axiosInstance.get(`${BaseUrl}/dashboard/superadmin`);
         setDashboardData(response.data.data);
         setApiError(false);
       } catch (err) {

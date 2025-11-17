@@ -81,7 +81,7 @@ const Company = () => {
   // Fetch companies data
   const fetchCompanies = async () => {
     try {
-      const response = await axios.get(`${BaseUrl}auth/Company`);
+      const response = await axios.get(`${BaseUrl}/companies`);
       setCompanies(response.data.data || []); // Ensure it's always an array
       setApiError(false);
     } catch (err) {
@@ -220,7 +220,7 @@ const Company = () => {
 
     try {
       // Make API call to delete the company
-      await axios.delete(`${BaseUrl}auth/Company/${companyToDelete.id}`);
+      await axios.delete(`${BaseUrl}/companies/${companyToDelete.id}`);
 
       // Remove the company from state
       const updatedCompanies = [...companies];
@@ -274,7 +274,7 @@ const Company = () => {
       }
 
       // Make API call
-      await axios.put(`${BaseUrl}auth/Company/${editCompany.id}`, formData, {
+      await axios.put(`${BaseUrl}/companies/${editCompany.id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -355,7 +355,7 @@ const Company = () => {
       }
 
       // Make API call
-      const response = await axios.post(`${BaseUrl}auth/Company`, formData, {
+      const response = await axios.post(`${BaseUrl}/companies`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
